@@ -1,9 +1,10 @@
 "use client";
+
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
-import userAvatar from "../../assets/user.png";
 import { useRouter } from "next/navigation";
+
 
 const Navbar = () => {
   const { data: session } = authClient.useSession();
