@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto bg-[url('https://project-on-book-borrowing-platform.vercel.app/images/banner.png')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl">
+    <div className="container mx-auto bg-[url('https://project-on-book-borrowing-platform.vercel.app/images/banner.png')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl mt-10">
       {/* Overlay */}
       <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
         <div className="max-w-7xl mx-auto px-6 text-white">

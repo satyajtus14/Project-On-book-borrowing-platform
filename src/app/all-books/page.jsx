@@ -1,4 +1,5 @@
-import BookCards from "@/components/shared/BookCards";
+
+import BooksFilterPage from "@/components/shared/BooksFilterPage";
 import { getAllBooksData } from "@/components/util/dataFetching";
 
 import React from "react";
@@ -12,11 +13,7 @@ const AllBooksPage = async () => {
         All Books Lists
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {books?.map((book) => (
-          <BookCards key={book.id} book={book} />
-        ))}
-      </div>
+      <BooksFilterPage books={books}/>
     </div>
   );
 };
