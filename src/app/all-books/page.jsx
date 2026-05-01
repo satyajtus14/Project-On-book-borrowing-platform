@@ -1,5 +1,6 @@
 import BookCards from "@/components/shared/BookCards";
 import { getAllBooksData } from "@/components/util/dataFetching";
+
 import React from "react";
 
 const AllBooksPage = async () => {

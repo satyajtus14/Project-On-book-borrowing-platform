@@ -1,3 +1,4 @@
+
 import { getAllBooksData } from "@/components/util/dataFetching";
 import Image from "next/image";
 import Link from "next/link";
