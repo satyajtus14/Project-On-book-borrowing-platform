@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import facebook from "../../../public/images/facebook.png"
+import instagram from "../../../public/images/instagram.png"
+import twitter from "../../../public/images/twitter.png"
 
 const Footer = () => {
   return (
@@ -85,6 +88,42 @@ const Footer = () => {
             >
               Get Started
             </Link>
+              <div >
+              <h3 className="text-white font-semibold mb-3 text-lg">Social Links</h3>
+              <ul className="space-y-2 text-zinc-400 flex justify-start gap-3">
+                <li>
+                 <Link href="https://www.facebook.com/">
+                  <Image 
+                  src={facebook} 
+                  alt="Facebook Image"
+                  width={30}
+                  height={30}/>
+                 </Link>
+                </li>
+                <li>
+
+                 <Link href="https://www.instagram.com/">
+                <Image 
+                src={instagram} 
+                alt="Instagram Image"
+                width={30}
+                height={30}
+                />
+                 </Link>
+                </li>
+
+                <li>
+                 <Link href="https://x.com/">
+                <Image 
+                src={twitter} 
+                alt="Twitter Image" 
+                width={30}
+                height={30}/>
+                 </Link>
+                </li>
+        
+              </ul>
+            </div>
           </div>
         </div>
 

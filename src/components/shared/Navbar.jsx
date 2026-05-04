@@ -1,10 +1,9 @@
 "use client";
-
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
+import userAvatar from "../../assets/user.png";
 import { useRouter } from "next/navigation";
-
 
 const Navbar = () => {
   const { data: session } = authClient.useSession();
@@ -21,17 +20,24 @@ const Navbar = () => {
     <div className="border-b px-2">
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
         <div className="flex gap-2 items-center">
-          <Image
+          
+        <Link href={"/"}>
+            <Image
             src={"/images/logo.png"}
             alt="logo"
             loading="eager"
-            width={30}
-            height={30}
+            width={40}
+            height={40}
             className="object-cover h-auto w-auto"
           />
+        </Link>
+        
           <h3 className="font-bold text-lg">
-            Book<span className="font-bold text-xl text-[#131356]">Nest</span>
+            <Link href={"/"}>
+            Book<span className="font-bold text-xl text-[#131356]">Nest</span> 
+            </Link>
           </h3>
+          
         </div>
 
         <ul className="flex items-center gap-5 text-md font-semibold">
@@ -41,18 +47,19 @@ const Navbar = () => {
           <li>
             <Link href={"/all-books"}>All Books</Link>
           </li>
-          <li>
+
+             <li>
             <Link href={"/about"}>About</Link>
           </li>
-
-          {user && (
-            <>
-              <li>
-                <Link href="/order">Order</Link>
-              </li>
+            <li>
+               <Link href="/order">Order</Link>
+             </li>
               <li>
                 <Link href="/profile">Profile</Link>
               </li>
+          {user && (
+            <>
+      
             </>
           )}
         </ul>
