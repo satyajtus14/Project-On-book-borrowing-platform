@@ -7,3 +7,12 @@ export async function  getAllBooksData () {
     return books;
     
 }
+
+
+
+export async function  getAllCategoriesData () {
+     const res = await fetch('https://project-on-book-borrowing-platform.vercel.app/category.json')
+    const categories = await res.json()
+    return categories;
+    
+}

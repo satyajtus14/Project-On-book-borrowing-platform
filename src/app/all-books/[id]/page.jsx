@@ -49,13 +49,13 @@ const BooksDetailsPage = async ({ params }) => {
             <div className="mt-2 text-md font-semibold">
               category:{" "}
               <span
-                className={`badge rounded-lg px-4 py-3 ${
+                className={`badge rounded-lg font-semibold text-lg px-4 py-3 ${
                   book.category === "Story"
-                    ? "bg-amber-300 text-amber-700"
+                    ? "badge-warning text-red-700"
                     : book.category === "Tech"
-                      ? "bg-green-300 text-green-700"
+                      ? "badge-success text-green-700"
                       : book.category === "Science"
-                        ? "bg-blue-300 text-blue-700"
+                        ? "badge-info text-blue-700"
                         : "bg-gray-300 text-gray-700"
                 }`}
               >

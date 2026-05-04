@@ -19,7 +19,17 @@ const BookCards = ({ book }) => {
           />
 
           {/* Category badge */}
-          <div className="badge badge-primary absolute top-2 right-2 text-xs sm:text-sm">
+          <div className={`badge absolute top-2 right-2 font-semibold text-xs sm:text-sm
+               ${
+                  book.category === "Story"
+                    ? "badge-warning text-red-700"
+                    : book.category === "Tech"
+                      ? "badge-success text-green-700"
+                      : book.category === "Science"
+                        ? "badge-info text-blue-700"
+                        : "bg-gray-300 text-gray-700"
+                }`}
+              >
             {book.category}
           </div>
         </figure>
