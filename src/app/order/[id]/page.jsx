@@ -1,9 +1,11 @@
+import AddToCartButton from "@/components/shared/AddToCartButton";
 import BookCards from "@/components/shared/BookCards";
 import { getAllBooksData } from "@/components/util/dataFetching";
 import Image from "next/image";
 import Link from "next/link";
 import { FcReadingEbook } from "react-icons/fc";
 import { FiShoppingCart } from "react-icons/fi";
+import { GiPriceTag } from "react-icons/gi";
 import { MdOutlineProductionQuantityLimits, MdOutlinePublish } from "react-icons/md";
 
 const OrderBooksPage = async ({params}) => {
@@ -83,14 +85,17 @@ const OrderBooksPage = async ({params}) => {
               </div>
 
             </div>
+                        <div className="flex items-center gap-2">
+                            <GiPriceTag className="text-xl" />
+                            <p className="font-semibold text-lg">
+                              ${book.price}
+                            </p>
+                          </div>
 
             <div className="pt-4">
-              <Link href="/payment">
-                <button className="btn btn-primary rounded-full">
-                  <FiShoppingCart />
-                  Add to Cart
-                </button>
-              </Link>
+              
+          <AddToCartButton book={book} />  {/* ← pass the whole book object */}
+
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 import userAvatar from "../../assets/user.png";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
     await authClient.signOut();
   };
 
-  const router = useRouter();
+
 
   return (
     <div className="border-b px-2">
@@ -49,15 +49,16 @@ const Navbar = () => {
             <Link href={"/all-books"}>All Books</Link>
           </li>
 
-             <li>
-            <Link href={"/about"}>About</Link>
-          </li>
             <li>
                <Link href="/order">Order</Link>
              </li>
               <li>
                 <Link href="/profile">Profile</Link>
               </li>
+              
+            <li>
+            <Link href={"/about"}>About</Link>
+          </li>
           {user && (
             <>
       
