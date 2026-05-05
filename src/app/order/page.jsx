@@ -1,11 +1,9 @@
+import { redirect } from 'next/navigation';
 import React from 'react';
 
 const OrderBooksPage = () => {
-    return (
-        <div>
-            Displayed ordered book here
-        </div>
-    );
+    redirect('/all-books');
+      return null;
 };
 
 export default OrderBooksPage;

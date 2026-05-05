@@ -1,11 +1,15 @@
 
-import BooksFilterPage from "@/components/shared/BooksFilterPage";
-import { getAllBooksData } from "@/components/util/dataFetching";
+
+import CategoriesSideBarPage from "@/components/sidebar/CategoriesSideBarPage";
+
+import { getAllBooksData, getAllCategoriesData } from "@/components/util/dataFetching";
 
 import React from "react";
 
 const AllBooksPage = async () => {
   const books = await getAllBooksData();
+
+  const categories = await getAllCategoriesData();
 
   return (
     <div className="container mx-auto px-4">
@@ -13,7 +17,12 @@ const AllBooksPage = async () => {
         All Books Lists
       </h1>
 
-      <BooksFilterPage books={books}/>
+     <div>
+
+     <CategoriesSideBarPage books={books} categories={categories} />
+     </div>
+     
+      {/* <BooksFilterPage books={books}/> */}
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import userAvatar from "../../assets/user.png";
 import { useRouter } from "next/navigation";
+import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
   const { data: session } = authClient.useSession();
@@ -102,6 +103,18 @@ const Navbar = () => {
               </button>
             </>
           )}
+          <div className='relative inline-flex'>
+            <Link href={"/payment"}>
+            
+          <button className='btn btn-ghost btn-circle'>
+          <span className='w-7 h-7 '> <FiShoppingCart size={30} /></span>
+          </button>
+         <span className='badge badge-error badge-sm absolute 
+           -top-1.5 -right-1.5 border-2 border-base-100 text-white'>
+         0
+          </span> 
+         </Link>
+         </div>
         </div>
       </nav>
     </div>

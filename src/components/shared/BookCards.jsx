@@ -71,7 +71,13 @@ const BookCards = ({ book }) => {
             <button className="btn btn-outline btn-sm sm:btn-md w-full rounded-full mt-3">
               View Details
             </button>
-          </Link>
+            </Link>
+            <Link href={`/order/${book.id}`}>
+             <button className="btn btn-primary btn-sm sm:btn-md w-full rounded-full mt-3">
+              Order Book
+            </button>
+            </Link>
+          
         </div>
       </div>
     </div>
